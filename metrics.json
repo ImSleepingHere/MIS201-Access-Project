@@ -1,0 +1,96 @@
+{
+  "final_model": "XGBoost + CatBoost + neural network blend",
+  "baseline_cv": [
+    {
+      "Model": "RandomForest",
+      "MAE (SAR)": 11141.856,
+      "MAE std": 970.445,
+      "R2": 0.893,
+      "R2 std": 0.051
+    },
+    {
+      "Model": "RandomForest (log price)",
+      "MAE (SAR)": 11674.541,
+      "MAE std": 943.846,
+      "R2": 0.869,
+      "R2 std": 0.045
+    },
+    {
+      "Model": "XGBoost",
+      "MAE (SAR)": 9988.477,
+      "MAE std": 653.011,
+      "R2": 0.928,
+      "R2 std": 0.016
+    },
+    {
+      "Model": "XGBoost (log price)",
+      "MAE (SAR)": 10222.85,
+      "MAE std": 589.27,
+      "R2": 0.908,
+      "R2 std": 0.016
+    }
+  ],
+  "improvement_steps": [
+    {
+      "Step": "1. XGBoost baseline (before)",
+      "MAE (SAR)": 9989,
+      "R2": 0.926,
+      "Median miss (SAR)": 5865,
+      "Within 10k SAR": "70%"
+    },
+    {
+      "Step": "2. + fixed mileage",
+      "MAE (SAR)": 9949,
+      "R2": 0.922,
+      "Median miss (SAR)": 5848,
+      "Within 10k SAR": "70%"
+    },
+    {
+      "Step": "3. + tuned XGBoost",
+      "MAE (SAR)": 9814,
+      "R2": 0.918,
+      "Median miss (SAR)": 5507,
+      "Within 10k SAR": "71%"
+    },
+    {
+      "Step": "   (CatBoost alone, log price)",
+      "MAE (SAR)": 10136,
+      "R2": 0.874,
+      "Median miss (SAR)": 5441,
+      "Within 10k SAR": "71%"
+    },
+    {
+      "Step": "4. + blend XGBoost & CatBoost",
+      "MAE (SAR)": 9574,
+      "R2": 0.908,
+      "Median miss (SAR)": 5375,
+      "Within 10k SAR": "71%"
+    },
+    {
+      "Step": "   (neural network alone, log price)",
+      "MAE (SAR)": 10329,
+      "R2": 0.91,
+      "Median miss (SAR)": 5675,
+      "Within 10k SAR": "69%"
+    },
+    {
+      "Step": "5. + neural network in the blend (final)",
+      "MAE (SAR)": 9347,
+      "R2": 0.919,
+      "Median miss (SAR)": 5276,
+      "Within 10k SAR": "72%"
+    }
+  ],
+  "importance_pct": {
+    "Year": 35.33,
+    "Model": 24.18,
+    "MakeName": 15.25,
+    "EngineSize": 10.79,
+    "Country": 5.52,
+    "Mileage": 4.53,
+    "Options": 3.62,
+    "GearType": 0.31,
+    "RegionName": 0.29,
+    "FuelType": 0.17
+  }
+}

@@ -1,0 +1,12 @@
+pandas>=3.0
+numpy
+openpyxl
+ipykernel
+scikit-learn>=1.5
+xgboost>=3.0
+matplotlib
+joblib
+catboost
+nbformat
+nbclient
+jupyter

@@ -179,3 +179,28 @@ cython_debug/
 #  refer to https://docs.cursor.com/context/ignore-files
 .cursorignore
 .cursorindexingignore
+catboost_info/
+
+# ---- MIS201 car-price model repo ----
+# The Access database, report, slides and other group-project files live outside this repo
+*.accdb
+*.laccdb
+*.mdb
+*.ldb
+*.docx
+*.pptx
+*.xlsx
+*.pdf
+*.zip
+~$*
+data/
+cleaning.ipynb
+ChatGPT_presentation_prompt.md
+Relationship Screenshot.png
+Report Chart.png
+
+# Windows and editor clutter
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
